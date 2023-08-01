@@ -52,5 +52,6 @@ surv <- estimateSurvival(cdm = cdm,
 plot_surv <- plotSurvival(surv,
              colour = "strata_level",
              facet= "strata_name")
-plot_surv
-ggsave()
+
+ggsave(here("Results", "mm_survival.png"), plot_surv,
+       width = 12, height = 9)
